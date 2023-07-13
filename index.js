@@ -25,7 +25,7 @@ app.use(express.json())
 const connect = async () => {
   try {
     const myConn = await mongoose.connect(process.env.MONGO)
-    console.log("Conectado a mongoDB desde el server")
+    console.log("Conectado a mongoDB desde el server...")
   } catch (error) {
     console.log(error.message)
   }
