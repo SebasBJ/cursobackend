@@ -25,7 +25,7 @@ app.use(express.json())
 const connect = async () => {
   try {
     const myConn = await mongoose.connect(process.env.MONGO)
-    console.log("Conectado a mongoDB")
+    console.log("Conectado a mongoDB desde el server")
   } catch (error) {
     console.log(error.message)
   }
@@ -59,5 +59,5 @@ app.use((err, req, res, next) => {
 
 app.listen(port, () => {
   connect()
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Escuchando el puerto ${port}`)
 })
